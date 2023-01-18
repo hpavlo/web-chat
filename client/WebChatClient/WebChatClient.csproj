@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="resource\icon.ico" />
+    <Content Include="Resource\icon.ico" />
   </ItemGroup>
 
   <ItemGroup>
