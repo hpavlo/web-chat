@@ -1,0 +1,14 @@
+﻿<Application x:Class="WebChatClient.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:WebChatClient"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <SolidColorBrush x:Key="AccentColor1" Color="#F6FFF8"/>
+            <SolidColorBrush x:Key="AccentColor2" Color="#EAF4F4"/>
+            <SolidColorBrush x:Key="AccentColor3" Color="#6B9080"/>
+            <SolidColorBrush x:Key="AccentColor4" Color="#2F3E46"/>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
