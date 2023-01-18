@@ -7,30 +7,30 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Control\HelloControl.xaml.cs">
+    <Compile Update="control\HelloControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Control\MyMessage.xaml.cs">
+    <Compile Update="control\MyMessage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Control\ServiceMessage.xaml.cs">
+    <Compile Update="control\ServiceMessage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Control\UserMessage.xaml.cs">
+    <Compile Update="control\UserMessage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="Control\HelloControl.xaml">
+    <Page Update="control\HelloControl.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Control\MyMessage.xaml">
+    <Page Update="control\MyMessage.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Control\ServiceMessage.xaml">
+    <Page Update="control\ServiceMessage.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Control\UserMessage.xaml">
+    <Page Update="control\UserMessage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">

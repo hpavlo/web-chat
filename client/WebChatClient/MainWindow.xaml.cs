@@ -29,7 +29,7 @@ namespace WebChatClient
         {
             WebSocket = new WebSocket(Properties.Resources.WebSocketURL);
             WebSocket.OnMessage += WebSocket_OnMessage;
-            WebSocket.OnError += (s, e) => MessageBox.Show("Server internal error");
+            WebSocket.OnError += (s, e) => MessageBox.Show(e.Message);
             WebSocket.Connect();
             SendCreatedSessionMessage();
         }
