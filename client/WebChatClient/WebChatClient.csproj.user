@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="control\HelloControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="control\MyMessage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="control\ServiceMessage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="control\UserMessage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="control\HelloControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="control\MyMessage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="control\ServiceMessage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="control\UserMessage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

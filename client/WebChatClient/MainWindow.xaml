@@ -1,0 +1,99 @@
+﻿<Window x:Class="WebChatClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:c="clr-namespace:WebChatClient.control"
+        mc:Ignorable="d"
+        Title="Web Chat" Height="600" Width="700"
+        Background="{StaticResource AccentColor1}"
+        Closing="Window_Closing">    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"
+                           MinHeight="100"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Right"
+                    Margin="20 5">
+            <TextBlock Text="My name:"
+                       FontSize="16"
+                       Foreground="{StaticResource AccentColor3}"/>
+            <TextBox x:Name="UsernameText"
+                     MinWidth="60"
+                     Margin="6 0"
+                     FontSize="16"
+                     Background="{StaticResource AccentColor1}"
+                     Foreground="{StaticResource AccentColor4}"
+                     BorderThickness="0 0 0 1"
+                     TextAlignment="Center"/>
+        </StackPanel>
+        
+        <ScrollViewer x:Name="ScrollMessageViewer"
+                      Grid.Row="1"
+                      Margin="20 0"
+                      HorizontalScrollBarVisibility="Hidden"
+                      VerticalScrollBarVisibility="Hidden">
+            <StackPanel x:Name="MessagePanel"/>
+        </ScrollViewer>
+        
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="94"/>
+            </Grid.ColumnDefinitions>
+            
+            <Border Margin="20 20 0 20"
+                    CornerRadius="15"
+                    Background="{StaticResource AccentColor2}">
+                <TextBox x:Name="MessageArea"
+                         Margin="20 15"
+                         FontSize="16"
+                         TextWrapping="Wrap"
+                         AcceptsReturn="True"
+                         Background="{StaticResource AccentColor2}"
+                         Foreground="{StaticResource AccentColor3}"
+                         BorderThickness="0"
+                         VerticalAlignment="Center"
+                         GotKeyboardFocus="MessageArea_GotKeyboardFocus"
+                         LostKeyboardFocus="MessageArea_LostKeyboardFocus"/>
+            </Border>
+            
+            <Border Grid.Column="1"
+                    Width="48" Height="48"
+                    Margin="16 26 20 26"
+                    CornerRadius="24"
+                    VerticalAlignment="Bottom"
+                    MouseLeftButtonUp="SendMessage_MouseLeftButtonUp">
+                <Border.Style>
+                    <Style>
+                        <Setter Property="Border.Background" Value="{StaticResource AccentColor3}"/>
+                        <Style.Triggers>
+                            <Trigger Property="Border.IsMouseOver" Value="True">
+                                <Setter Property="Border.Background" Value="#5B8070" />
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Border.Style>
+                
+                <Image Width="26" Height="26">
+                    <Image.Source>
+                        <DrawingImage>
+                            <DrawingImage.Drawing>
+                                <DrawingGroup ClipGeometry="M0,0 V30 H30 V0 H0 Z">
+                                    <GeometryDrawing Brush="{StaticResource AccentColor1}"
+                                                     Geometry="F1 M30,30z M0,0z M13,28C13,29.1046 13.8954,30 15,30 16.1046,30 17,29.1046 17,28L13,28z M16.4142,0.585787C15.6332,-0.195262,14.3668,-0.195262,13.5858,0.585786L0.857865,13.3137C0.0768166,14.0948 0.0768165,15.3611 0.857865,16.1421 1.63891,16.9232 2.90524,16.9232 3.68629,16.1421L15,4.82843 26.3137,16.1421C27.0948,16.9232 28.3611,16.9232 29.1421,16.1421 29.9232,15.3611 29.9232,14.0948 29.1421,13.3137L16.4142,0.585787z M17,28L17,2 13,2 13,28 17,28z" />
+                                </DrawingGroup>
+                            </DrawingImage.Drawing>
+                        </DrawingImage>
+                    </Image.Source>
+                </Image>
+            </Border>
+        </Grid>
+
+        <c:HelloControl Grid.RowSpan="3"/>
+    </Grid>
+</Window>

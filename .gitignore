@@ -33,6 +33,6 @@ build/
 .vscode/
 
 ### Visual Studio ###
-!**/.vs/
-!**/build/
-!**/obj/
+/client/.vs/
+/client/WebChatClient/bin/
+/client/WebChatClient/obj/
