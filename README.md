@@ -40,9 +40,9 @@ the server and, if necessary, during the communication process.
 ## 📎 How to start the program
 1. Clone the project from GitHub
 2. Run server part of app
-3. Download client app
+3. Download [client app](https://github.com/pavlogook/web-chat/releases/tag/v1.0.0)
 4. To run client app you need to have on your computer installed [Windows Desktop Runtime 6.0.x](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) 
-or you can download portable app with dependency
+or you can download portable [app with dependency](https://github.com/pavlogook/web-chat/releases/tag/v1.0.0)
 5. Enjoy the program 😉
 
 ## ⭐ Screenshots
